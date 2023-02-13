@@ -20,6 +20,7 @@ function App() {
   return (
     <>
       <h1>Welcome to narutopedia</h1>
+
       <div className="cardContainer">
         {data.map((x, idx) => {
           return <CharacterCard key={x.id} character={x} />;
