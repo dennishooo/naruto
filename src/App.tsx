@@ -4,7 +4,14 @@ import "./App.css";
 
 function App() {
   useEffect(() => {
-    console.log("app loaded");
+    async function fetchNaruto() {
+      let response = await fetch(
+        "https://naruto-api.fly.dev/api/v1/characters"
+      );
+      let data = await response.json();
+      console.log(data);
+    }
+    fetchNaruto();
   }, []);
   return <div>hello world</div>;
 }
