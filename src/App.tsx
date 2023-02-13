@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import reactLogo from "./assets/react.svg";
 import "./App.css";
+import CharacterCard from "./components/characterCard";
 
 function App() {
   const [data, setData] = useState<any[]>([]);
@@ -20,7 +20,7 @@ function App() {
   return (
     <>
       <div>hello world</div>
-
+      <CharacterCard />
       {data.map((character) => {
         return (
           <div>
