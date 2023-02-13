@@ -19,10 +19,12 @@ function App() {
 
   return (
     <>
-      <div>hello world</div>
-      {data.map((x, idx) => {
-        return <CharacterCard key={x.id} character={x} />;
-      })}
+      <h1>Welcome to narutopedia</h1>
+      <div className="cardContainer">
+        {data.map((x, idx) => {
+          return <CharacterCard key={x.id} character={x} />;
+        })}
+      </div>
     </>
   );
 }
