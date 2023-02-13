@@ -11,6 +11,15 @@ function CharacterCard({ character }: any) {
         onClose={() => setOpened(false)}
         title="Introduce yourself!"
       >
+        <div className="infoList">
+          {Object.keys(character.info).map((key) => {
+            return (
+              <div key={key}>
+                {key}: {character.info[key]}
+              </div>
+            );
+          })}
+        </div>
         {/* Modal content */}
       </Modal>
       <div className="card" onClick={() => setOpened(true)}>
